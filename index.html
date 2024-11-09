@@ -81,6 +81,22 @@
     text-align: center;
     padding: 10px 0;
    }
+   .overlay{
+    background-color:rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .modal{
+    background-color: #fff;
+    height:300px ;
+    width: 400px;
+   }
 
    @media (min-width: 768px) and (max-width: 1024px){
     .container{
@@ -179,6 +195,14 @@
             <option>Suite Room</option>
         </select>
         <button type="submit">Book Now</button>
+        <div class="overlay">
+            <div class="modal"><br>
+                <h3>All details are correct</h3>
+                <h1>Confirm Booking</h1>
+                <button class="Confirm">Confirm</button>
+                <button class="Cancel">Cancel</button>
+            </div>
+        </div>
     </form>
 </div>
 
