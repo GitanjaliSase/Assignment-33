@@ -91,6 +91,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
    }
    .modal{
     background-color: #fff;
@@ -213,16 +214,16 @@
             <option>Deluxe Room</option>
             <option>Suite Room</option>
         </select>
-        <button type="submit">Book Now</button>
-        <div class="overlay">
+        <button type="button" onclick="openModal()">Book Now</button>
+        <div class="overlay" id="overlay">
             <div class="modal"><br>
                 <div class="dialog-content">
                     <div class="correct"><br>
                 <h3>All details are correct ✔️</h3>
                 </div><br>
                 <h1>Confirm Booking</h1>
-                <button class="Confirm">Confirm</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="Cancel">Cancel</button>
+                <button class="Confirm" onclick="closeModel()">Confirm</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="Cancel" onclick="closeModel()">Cancel</button>
             </div>
             </div>
         </div>
@@ -239,6 +240,15 @@
     <p>&copy; 2024 Luxury Hotel Booking. All rights reserved.</p>
 </div>
 </footer>
-
+<script>
+    function openModal(){
+        const overlayElement=document.getElementById('overlay');
+        overlayElement.style.display = 'flex';
+    }
+    function closeModel(){
+        const overlayElement=document.getElementById('overlay');
+        overlayElement.style.display = "none";
+    }
+</script>
 </body>
 </html>
